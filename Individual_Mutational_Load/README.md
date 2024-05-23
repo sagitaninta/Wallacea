@@ -51,6 +51,10 @@ cat angsd_args_file.tsv | xargs -L1 -P0 ./scripts/angsd_genolik.sh
 This will generate two files for each individuals in the `genolik` directory.
 
 ## 3. Posterior
-
+After completing the previous steps we can run:
+```sh
+mkdir post
+conda 
+```
 ## 4. Load
 
