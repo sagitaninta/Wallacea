@@ -17,8 +17,11 @@ chmod 770 scripts/angsd_genolik.sh
 ./scripts/angsd_genolik.sh path/to/bam sample_ID coordinate_file
 ```
 
-Assuming a tab separated file containing the required arguments this step can be parallelized as follows:
+Assuming a tab separated file (`angsd_args_file.tsv`) containing the required arguments in the order shown above, this step can be parallelized to an arbitrary number of individuals as follows:
 
 ```sh
 cat angsd_args_file.tsv | xargs -L1 -P0 ./scripts/angsd_genolik.sh
 ```
+
+## 2. Posterior 
+
