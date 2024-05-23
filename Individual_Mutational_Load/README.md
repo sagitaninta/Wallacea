@@ -18,6 +18,8 @@ The pipeline requires a .bed file (Browser Extensible Data format) with the foll
 - Starting position
 - Ending position
 - Variant ID
+- Reference allele
+- Alternative allele
 - 
 
 Note that coordinate are zero-based (see `example-input_db.bed` for correct formatting).
