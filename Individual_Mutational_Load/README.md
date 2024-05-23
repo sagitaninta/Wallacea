@@ -1,7 +1,7 @@
 # Mutational Load
 This section of the pipeline consists of four steps:
 
-- Creating an input databese with conservation scores and priors
+- Creating an input database with conservation scores and priors
 - Obtaining genotype likelihoods (using ANGSD[^1])
 - Calculating posterior probabilities
 - Estimating genetic load
