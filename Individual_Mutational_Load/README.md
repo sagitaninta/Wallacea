@@ -6,7 +6,7 @@ This section of the pipeline consists of four steps:
 - Calculating posterior probabilities
 - Estimating genetic load
 
-Here we present our strategy to complete each task for a single individual but this can be easily parallelized to an arbitrary number of individuals in the dataset.
+Here we present our strategy to perform all calculation for a single individual but this can be easily parallelized to an arbitrary number of individuals in the dataset.
 [^1]:Korneliussen, T.S., Albrechtsen, A. & Nielsen, R. ANGSD: Analysis of Next Generation Sequencing Data. BMC Bioinformatics 15, 356 (2014). https://doi.org/10.1186/s12859-014-0356-4 
 
 ## 1. Prior db
