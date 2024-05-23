@@ -39,5 +39,5 @@ if (likelihood_df.size>0):
 	posterior_df.columns = ["AA","AC","AG","AT","CC","CG","CT","GG","GT","TT"]
 	posterior_output=final_df[["Variant_ID", "Ref","Alt","phasCon", "phyloP"]].join(posterior_df)
 else:
-	posterior_output=pd.DataFrame(0, index=np.arange(0), columns=["Variant_ID","Anc","Ref","Alt","phyloP","phasCon","AA","AC","AG","AT","CC","CG","CT","GG","GT","TT"])
+	posterior_output=pd.DataFrame(0, index=np.arange(0), columns=["Variant_ID","Ref","Alt","phyloP","phasCon","AA","AC","AG","AT","CC","CG","CT","GG","GT","TT"])
 posterior_output.to_csv(out_file, header=True, index=False, sep="\t")
