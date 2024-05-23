@@ -24,13 +24,13 @@ The pipeline requires a .bed file (Browser Extensible Data format) as input with
 - phasCons score
 - phyloP score
 
-Note that coordinate are zero-based (see `example-input_db.bed` for correct formatting).
+Note that coordinate are zero-based (see `example_input_db.bed` for correct formatting).
 
-The script `prior_creator.py` will parse the input database and output a .tsv file containing the variant ID, the allele segregating at each site and a list of informed prior probability values for each possible genotype (see `example_prior_db.tsv`). 
+The script `prior_creator.py` will parse the input database and output a .tsv file containing the variant ID, the allele segregating at each site and a list of informed prior probability values for each possible genotype (see `example_prior_scores_db.tsv`). 
 
 ```sh
 conda activate load
-python input_db.bed output_db.tsv
+python input_db.bed priors_scores_db.tsv
 ```
 
 ## 2. Genotype likelihood
@@ -55,7 +55,7 @@ After completing the previous steps we can run:
 ```sh
 mkdir post
 conda activate load
-python posterior_estimator.py output_db.tsv ind_genotype_likelihood.glf.gz ./post/ind_posterior_file.post
+python posterior_estimator.py priors_scores_db.tsv ind_genotype_likelihood.glf.gz ./post/ind_posterior_file.post
 ```
 The `posterior_estimator.py` script will calculate posterior probability for each site in the `output_db.tsv` for a given individual. 
 
