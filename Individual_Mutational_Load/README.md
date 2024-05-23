@@ -54,7 +54,18 @@ This will generate two files for each individuals in the `genolik` directory.
 After completing the previous steps we can run:
 ```sh
 mkdir post
-conda 
+conda activate load
+python posterior_estimator.py output_db.tsv ind_genotype_likelihood.glf.gz ./post/ind_posterior_file.post
 ```
+The `posterior_estimator.py` script will calculate posterior probability for each site in the `output_db.tsv` for a given individual. 
+
+As before this can be easily parallelize by running:
+```sh
+ls ./genolik/*.glf.gz > posterior_list.txt
+chmod 770 do_post.sh
+cat posterior_list.txt | xargs -L1 -P0 ./do_post.sh
+```
+Where `do_post.sh` is simply a bash wrapper for the `posterior estimator.py` script.
+
 ## 4. Load
 
