@@ -13,6 +13,12 @@ This step requires three input, namely, a bam file (along with its full path), t
 
 ```sh
 mkdir genolik
-chmod 770 angsd_genolik.sh
-./angsd_genolik.sh path/to/bam sample_ID coordinate_file
+chmod 770 scripts/angsd_genolik.sh
+./scripts/angsd_genolik.sh path/to/bam sample_ID coordinate_file
+```
+
+Assuming a tab separated file containing the required arguments this step can be parallelized as follows:
+
+```sh
+cat angsd_args_file.tsv | xargs -L1 -P0 ./scripts/angsd_genolik.sh
 ```
