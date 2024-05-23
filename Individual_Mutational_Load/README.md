@@ -30,7 +30,7 @@ The script `prior_creator.py` will parse the input database and output a .tsv fi
 
 ```sh
 conda activate load
-python input_db output_bd
+python input_db.bed output_db.tsv
 ```
 
 ## 2. Genotype likelihood
@@ -41,7 +41,7 @@ mkdir genolik
 chmod 770 scripts/angsd_genolik.sh
 ./scripts/angsd_genolik.sh path/to/bam sample_ID coordinate_file
 ```
-Note that coordinates for ANGSD are 1-based, hence, these coordinates should match the `End` field in your `.bed` file (see `example_coord_file.txt` for correct formatting).
+Note that coordinates for ANGSD are 1-based, hence, these coordinates should match the `Ending position` (3^{rd} field) in your `input_db.bed` file (see `example_coord_file.txt` for correct formatting).
 
 Assuming a tab separated file (`angsd_args_file.tsv`) containing the required arguments in the order shown above, this step can be parallelized to an arbitrary number of individuals as follows:
 
