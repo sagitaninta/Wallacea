@@ -1,13 +1,15 @@
 # Mutational Load
-This section of the pipeline consists of four steps:
+This simple python based pipeline consists of four steps:
 
 - Creating an input database with conservation scores and priors
 - Obtaining genotype likelihoods (using ANGSD[^1])
 - Calculating posterior probabilities
 - Estimating genetic load
 
-Here we present our strategy to perform all calculation for a single individual but this can be easily parallelized to an arbitrary number of individuals in the dataset.
-[^1]:Korneliussen, T.S., Albrechtsen, A. & Nielsen, R. ANGSD: Analysis of Next Generation Sequencing Data. BMC Bioinformatics 15, 356 (2014). https://doi.org/10.1186/s12859-014-0356-4 
+The first three steps essentially apply the Baesyan framework described in Plassais et al. (2022)[^2] and extend it to a small panel of SNPs. Here we present our strategy to perform all calculation for a single individual but this can be easily parallelized to an arbitrary number of individuals in the dataset.
+
+[^1]:Korneliussen, T.S., Albrechtsen, A. & Nielsen, R. (2014). ANGSD: Analysis of Next Generation Sequencing Data. BMC Bioinformatics 15:356. https://doi.org/10.1186/s12859-014-0356-4 
+[^2]: Plassais, J., vonHoldt, B.M, Parker, H.G., Carmagnini, A., et al. (2022). Natural and human-driven selection of a single non-coding body size variant in ancient and modern canids. Current Biology, 32:889-897.
 
 ## 1. Prior db
 
