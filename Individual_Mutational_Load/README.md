@@ -26,7 +26,7 @@ The pipeline requires a .bed file (Browser Extensible Data format) as input with
 
 Note that coordinate are zero-based (see `example_input_db.bed` for correct formatting).
 
-The script `prior_creator.py` will parse the input database and output a .tsv file containing the variant ID, the allele segregating at each site and a list of informed prior probability values for each possible genotype (see `example_prior_scores_db.tsv`). 
+The script `prior_creator.py` will parse the input database and output a .tsv file containing the variant ID, the allele segregating at each site and a list of informed prior probability values for each possible genotype (see `example_priors_scores_db.tsv`). 
 
 ```sh
 conda activate load
