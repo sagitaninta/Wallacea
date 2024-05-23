@@ -16,14 +16,13 @@ mkdir genolik
 chmod 770 scripts/angsd_genolik.sh
 ./scripts/angsd_genolik.sh path/to/bam sample_ID coordinate_file
 ```
+Note that coordinates for ANGSD are 1-based, see `example_coord_file.txt`.
 
 Assuming a tab separated file (`angsd_args_file.tsv`) containing the required arguments in the order shown above, this step can be parallelized to an arbitrary number of individuals as follows:
 
 ```sh
 cat angsd_args_file.tsv | xargs -L1 -P0 ./scripts/angsd_genolik.sh
 ```
-
-Note that coordinates for ANGSD are 1-based, see `example_coord_file.txt`
 
 ## 2. Posterior 
 
