@@ -1,1 +1,1 @@
-python sift_load_est.py $1
+python sift_load_estimator.py $1
