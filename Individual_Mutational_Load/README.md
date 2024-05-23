@@ -59,13 +59,22 @@ python posterior_estimator.py priors_scores_db.tsv ind_genotype_likelihood.glf.g
 ```
 The `posterior_estimator.py` script will calculate posterior probability for each site in the `output_db.tsv` for a given individual. 
 
-As before this can be easily parallelize by running:
+As before this step can be easily parallelized by running:
 ```sh
+mkdir post
 ls ./genolik/*.glf.gz > posterior_list.txt
 chmod 770 do_post.sh
+conda activate load
 cat posterior_list.txt | xargs -L1 -P0 ./do_post.sh
 ```
 Where `do_post.sh` is simply a bash wrapper for the `posterior estimator.py` script.
 
 ## 4. Load
+Finally to calculate mutational load we can run:
+```sh
+python load_estimator.py ./post/ind_file.post
+```
+which can be parallelized following the same strategy described above and using the `load.sh` wrapper.
+
+## Calculating genetic load using SIFT scores
 
