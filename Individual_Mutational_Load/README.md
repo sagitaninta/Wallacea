@@ -77,4 +77,4 @@ python load_estimator.py ./post/ind_file.post
 which can be parallelized following the same strategy described above and using the `load.sh` wrapper.
 
 ## Calculating genetic load using SIFT scores
-
+For legacy reasons we have created a separate pipeline for calculating genetic load using SIFT scores. This consists of the same four steps detailed above and employs variants of the python and bash scripts mentioned in the previous section with the prefix `sift`.
