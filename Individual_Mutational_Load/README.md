@@ -20,9 +20,12 @@ The pipeline requires a .bed file (Browser Extensible Data format) with the foll
 - Variant ID
 - Reference allele
 - Alternative allele
-- 
+- phasCons score
+- phyloP score
 
 Note that coordinate are zero-based (see `example-input_db.bed` for correct formatting).
+
+The script `prior_creator.py` will parse the input database and output a .tsv file containing the variant ID, the allele segregating at each site and a list of informed prior probability values for each possible genotype (see `example_prior_db.tsv`). The script requires `python 3.9` and  
 ## 2. Genotype likelihood
 This step requires three input, namely, a bam file (along with its full path), the sample ID and a list of genomic coordinate (one site per line).
 
