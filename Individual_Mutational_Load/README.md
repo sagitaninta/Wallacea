@@ -12,8 +12,15 @@ The first three steps essentially apply the Baesyan framework described in Plass
 [^2]: Plassais, J., vonHoldt, B.M, Parker, H.G., Carmagnini, A., et al. (2022). Natural and human-driven selection of a single non-coding body size variant in ancient and modern canids. Current Biology, 32:889-897.
 
 ## 1. Prior db
+The pipeline requires a .bed file (Browser Extensible Data format) with the following fields: 
 
+- Chromosome
+- Starting position
+- Ending position
+- Variant ID
+- 
 
+Note that coordinate are zero-based (see `example-input_db.bed` for correct formatting).
 ## 2. Genotype likelihood
 This step requires three input, namely, a bam file (along with its full path), the sample ID and a list of genomic coordinate (one site per line).
 
