@@ -34,7 +34,7 @@ python input_db.bed output_db.tsv
 ```
 
 ## 2. Genotype likelihood
-This step requires three input, namely, a bam file (along with its full path), the sample ID and a list of genomic coordinate (one site per line).
+This step requires three input, namely, a bam file, the sample ID and a file containing the list of genomic coordinate (one site per line).
 
 ```sh
 mkdir genolik
