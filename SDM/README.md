@@ -16,6 +16,7 @@ Input = raster layer (geoTiff, .tiff)
 
 ## 2. Constraining occurrence by forest cover
 Filtered and curated occurrence data for the taxa need to in .csv format, with one occurrence per line and a x/y coordinate column 
+
 The occurrences need to converted to a spatial dataframe. The points are the intersected with the forest cover vector layer (.shp), resulting in only points occurring within the forest cover layer for the generation of the model.
 
 ## 3. Testing for colinearity in the covariates
@@ -23,6 +24,7 @@ Predictor variables that are highly correlated are removed (th=3)
 
 ## 4. Generate ESDM
 Using the `ensemble_modelling` function in the SSDM package, 9 algorithms are tested. The ensemble model is then generated using the algorithms that pass the 0.7 AUC threshold
+
 The raw ESDM is then constrained by the forest cover layer - by converting any non-forested pixels to 0, giving us the habitat suitability score
 HabitatSuitability = ESDMraster * ForestCoverLayer
 
@@ -31,4 +33,4 @@ The ESDM is the rescaled based on the percentiles of habitat suitability scores 
 
 ## Further processing - QGIS
 - QGIS is then used to calculate the amounts of each habitat suitability class that can be found in the different land use categories
-- this is calculated using the field calculator and overlap tool
+- This is calculated using the field calculator and overlap tool
