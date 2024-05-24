@@ -8,7 +8,7 @@ This simple python based pipeline consists of four steps:
 
 The first three steps essentially apply the Baesyan framework described in Plassais et al. (2022)[^2] to a small panel of SNPs. 
 
-Here we present our strategy to perform all calculation for a single individual but this can be easily parallelized to an arbitrary number of individuals in the dataset. 
+Here we first present our strategy to perform all calculation for a single individual and then suggest how to parallelized it in order to obtain genetic load estimates for an arbitrary number of individuals in the dataset. 
 
 The pipeline has been designed for `python 3.11` and requires the following python libraries: `pandas`, `itertools`, `numpy`, along with `math`, `sys`, and `os`. For simplicity, we recommend to install these in a `conda` envirnment (hereafter termed `load`) to avoid conflict and dependency issues.
 
