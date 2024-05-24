@@ -15,9 +15,9 @@ Input = raster layer (geoTiff, .tiff)
 - All predicator layers need to be in the same resolution and projection, and should be clipped and masked to the same geographic extent.
 
 ## 2. Constraining occurrence by forest cover
-Filtered and curated occurrence data for the taxa need to in .csv format, with one occurrence per line and a x/y coordinate column 
+Filtered and curated occurrence data for the taxa need to be in .csv format, with one occurrence per line and a x/y coordinate column 
 
-The occurrences need to converted to a spatial dataframe. The points are the intersected with the forest cover vector layer (.shp), resulting in only points occurring within the forest cover layer for the generation of the model.
+The occurrences need to be converted to a spatial dataframe. The points are the intersected with the forest cover vector layer (.shp), resulting in only points occurring within the forest cover layer for the generation of the model.
 
 ## 3. Testing for colinearity in the covariates
 Predictor variables that are highly correlated are removed (th=3)
