@@ -1,6 +1,6 @@
 # Ensemble Species Distrubution Models
 
-**Script is currenty being modified due to R spatial compatibility issues and dependencies on the raster package*
+*Script is currenty being modified due to R spatial compatibility issues and dependencies on the raster package*
 
 The SDM R script consists of 5 steps:
 
