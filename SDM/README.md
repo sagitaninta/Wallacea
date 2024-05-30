@@ -1,5 +1,7 @@
 # Ensemble Species Distrubution Models
 
+### script is currenty being modified due to R spatial compatibility issues and dependencies on the "raster" package
+
 The SDM R script consists of 5 steps:
 
 - Generating and formatting predictor variables
