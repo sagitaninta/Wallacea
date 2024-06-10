@@ -9,6 +9,7 @@ The SDM R script consists of 5 steps:
 - Reduce colinearity in the covariates
 - Generate ESDM 
 - Rescale ESDM to quantiles
+- The code is for the generation of the anoa SDM, but can easily be adapted for the babirusa, any other species or for different covariates 
 
 ## 1. Preparing predictor variables
 Input = raster layer (geoTiff, .tiff)
