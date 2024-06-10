@@ -5,6 +5,8 @@
 ## Code developed by: Dr Nicolas J. Deere, Durrell Institute of Conservation and Ecology (DICE), University of Kent
 ## Code edited and implemented by Dr Rosie Drinkwater, Ludwig Maximillians University (LMU)
 ## For troubleshooting, please contact: n.j.deere@kent.ac.uk and/or r.drinkwater@lmu.de
+## 
+## This is the code for the anoa SDM generation
 
 # Clear the globl environment
 rm(list=ls())
