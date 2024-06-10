@@ -1,4 +1,4 @@
-# Ensemble Species Distrubution Models
+# Ensemble Species Distribution Models
 
 *Script is currenty being modified due to R spatial compatibility issues and dependencies on the raster package*
 
